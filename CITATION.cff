@@ -15,6 +15,7 @@ authors:
     orcid: "https://orcid.org/0009-0006-8065-5286"
     affiliation: "Laboratoire MACS, Conservatoire national des arts et métiers (Cnam), Paris, France"
 license: MIT
+doi: 10.5281/zenodo.24473755
 repository-code: "https://github.com/langrenne/MLFMM2HRTF"
 version: 1.0.0
 date-released: 2026-11-23

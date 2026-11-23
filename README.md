@@ -1,5 +1,7 @@
 # MLFMM2HRTF
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24473755.svg)](https://doi.org/10.5281/zenodo.24473755)
+
 Computation of individual head-related transfer functions (HRTFs) from a head
 mesh, up to 24 kHz, with a broadband multilevel fast multipole method (MLFMM)
 and the boundary element method (BEM). Meshes of several hundred thousand
@@ -133,6 +135,9 @@ domain): see [`THIRD_PARTY.md`](THIRD_PARTY.md).
 HRTF data (SOFA files) computed with this software and distributed by the
 authors: CC BY 4.0.
 
-If you use MLFMM2HRTF, please cite the preprint (reference to come) and, for the
+If you use MLFMM2HRTF, please cite the software, C. Langrenne, *MLFMM2HRTF*,
+Zenodo, [doi:10.5281/zenodo.24473755](https://doi.org/10.5281/zenodo.24473755)
+(all versions; the DOI of each version is on that page, and GitHub's "Cite this
+repository" gives the reference), the preprint (reference to come) and, for the
 Lebedev grids, V. I. Lebedev and D. N. Laikov, Doklady Mathematics 59(3),
 477–481, 1999.
