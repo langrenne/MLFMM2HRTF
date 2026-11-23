@@ -54,7 +54,7 @@ with the default `kreuzer` source only.
 ## Building
 
 ```bash
-git clone <repository-url> MLFMM2HRTF
+git clone https://github.com/langrenne/MLFMM2HRTF.git
 cd MLFMM2HRTF
 make                             # main_HRTF_Ray and main_HRTF_Diff
 cd test && ./run_test.sh         # 2 regression cases (Ray, Diff) on a small sphere, ~15 s

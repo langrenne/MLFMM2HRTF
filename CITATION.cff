@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "MLFMM2HRTF"
+abstract: >-
+  Computation of individual head-related transfer functions (HRTFs) from a
+  head mesh, up to 24 kHz, with a broadband multilevel fast multipole method
+  (MLFMM) and the boundary element method (BEM): CHI formulation, adaptive
+  octree, Ray and Diff sources, skin impedance. Python tools for mesh checks,
+  source placement, direction grids, frequency interpolation, HRIR windowing,
+  diffuse-field equalisation and SOFA export.
+authors:
+  - family-names: Langrenne
+    given-names: Christophe
+    orcid: "https://orcid.org/0009-0006-8065-5286"
+    affiliation: "Laboratoire MACS, Conservatoire national des arts et métiers (Cnam), Paris, France"
+license: MIT
+repository-code: "https://github.com/langrenne/MLFMM2HRTF"
+version: 1.0.0
+date-released: 2026-11-23
+keywords:
+  - HRTF
+  - head-related transfer function
+  - boundary element method
+  - fast multipole method
+  - MLFMM
+  - SOFA
+  - acoustics
