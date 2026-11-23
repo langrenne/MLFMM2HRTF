@@ -1,0 +1,96 @@
+ MLFMM2HRTF  main_HRTF_Ray  2026-11-23 16:17
+
+ case file    : config_RAY.txt
+ threads      : 1 (OpenMP)
+ frequencies  : 2 (list), 2000.000 to 24000.000 Hz
+ c            : 340.00 m/s
+ k(1) =   36.959913571644620       k(NF) =   443.51896285973550     
+ mesh         : sphere_test.msh: 4010 triangles, 2007 nodes, edges 1.56 to 13.68 mm
+ interp_solveur =           1  (1: HF translations interpolate then shift)
+ CHI: depth 1.000 x h, reduced on    3696 elements (curvature:       0), min 0.500, chi_courbure 0.500
+ CHI: wavelength limit, k max =   443.5 m-1: chi <= 0.75 on     282 elements (h > lambda/6), chi <= 0.5 on    3414 (h > lambda/3)
+ technical    : parametres_MLFMM_test.txt
+ setting      : fast
+ NL = -1  seuil_adapt =  1.60  FMM_meth = 2  FMM_pre = 2  propagation = 1
+ CHI (Cunefare 1989): target points 1.000 x element size below the surface
+ bands (Hz) :    5000.    8000.
+   epsilon0 :  1.0E-05  1.0E-06  1.0E-07
+   epsilon2 :  1.0E-04  1.0E-04  1.0E-04
+   seuil_HF :     2.00     2.00     2.00
+ LF boost: dN_BF = 0  below  2000.0 Hz   seuil_HF = 2.00   Nmin =  4
+ ILUT lfil =  25  epsilon1 = 1.00E-04  epsilon0 = 1.00E-05  epsilon2 = 1.00E-04
+ octree       : adaptive, 5 levels, box 169.9 mm, leaf cell 5.310 mm
+ octree: 0.1 % edge quantile  1.917 mm
+ CHI: octree on 2 NE points (sources Pc, interior targets Pt)
+ cells per level:          56         272        1165        4525
+ adaptive octree: level, cell (mm), cells, elements, leaf cells
+       2    42.481        56         2         0
+       3    21.240       272      3340       137
+       4    10.620      1165       294       417
+       5     5.310      4525       374         0
+ near-field pairs num_K0 =      767380
+ skin         : rigid
+ source       : triangle 796 (kreuzer: vibrating triangle, area 1.7319 mm2)
+ directions   : Pext_test.txt: 8 points
+ normalisation: yes (free field at the head centre)
+ init_BF_MLFMM: num_init =       10660
+ init_BF_MLFMM:  0.26707640755921602       s
+ preparation  : 0.3 s
+ RAM/thread   : 0.06 GB (2000.0 Hz) to 0.29 GB (24000.0 Hz)
+   at the maximum: FMM, near field, ILUT, GMRES =   0.29   0.03   0.00   0.01 GB
+ memory       : shared 0.10 GB, available 52.1 GB, budget of the threads 44.3 GB
+ parallel     : 1 threads at most: 1 at the largest frequency, 1 at the smallest
+ guess = 2:    2 blocks of contiguous frequencies
+
+ frequencies as they finish (2):
+       #   freq (Hz)   iter   time (s)   done
+ block    1 (   2000.0 -   2000.0 Hz,  0.06 GB):  1 blocks running,    0.06 GB reserved         t =      0.0 s, thread  0
+ #    1 start: f =    2000.000 Hz, k =   36.9599, initial guess 0
+ #    1 band: epsilon0 = 1.00E-05  epsilon2 = 1.00E-04
+ #    1 LF levels (1 = LF): 0 0 1 1
+ #    1 FMM orders N:   9   7   7   7
+CHECK[   1] ordre_N    =    9    7    7    7
+ #    1 right-hand side (FMM)        0.5 s
+CHECK[   1] norm_var1  = 1.41359907E+02
+ near-field quadrature, k =      37.0 m-1: pairs with 7/16/19/27/33/48 points: 5454 / 557522 / 74611 / 71278 / 0 / 54210
+ #    1 near field                  1.0 s
+CHECK[   1] norm_Anear = 4.21415533E+01
+CHECK[   1] norm_Bnear = 1.66696847E-01
+CHECK[   1] norm_rhs   = 6.78451270E+02
+ #    1 ILUT preconditioner         0.0 s
+ #    1 GMRES   7 iterations       0.5 s
+CHECK[   1] gmres_iter =    7
+CHECK[   1] norm_sol2  = 6.48147442E+02
+ #    1 external points             0.0 s
+CHECK[   1] norm_pout  = 8.80270271E-02
+CHECK[   1] norm_HRTF  = 3.31850111E+00
+       1    2000.000      7        2.2   1/2
+ end of block    1 at t =      2.2 s, thread  0, blocks running  0
+ block    2 (  24000.0 -  24000.0 Hz,  0.29 GB):  1 blocks running,    0.29 GB reserved (chain) t =      2.2 s, thread  0
+ #    2 start: f =   24000.000 Hz, k =  443.5190, initial guess 1
+ #    2 band: epsilon0 = 1.00E-07  epsilon2 = 1.00E-04
+ #    2 LF levels (1 = LF): 0 0 0 0
+ #    2 FMM orders N:  36  24  17  12
+CHECK[   2] ordre_N    =   36   24   17   12
+ #    2 right-hand side (FMM)        3.5 s
+CHECK[   2] norm_var1  = 1.39220125E+02
+ near-field quadrature, k =     443.5 m-1: pairs with 7/16/19/27/33/48 points: 0 / 47795 / 9077 / 8099 / 643894 / 54210
+ #    2 near field                  2.0 s
+CHECK[   2] norm_Anear = 3.21029902E+01
+CHECK[   2] norm_Bnear = 1.09960690E-01
+CHECK[   2] norm_rhs   = 3.26130417E+02
+ #    2 ILUT preconditioner         0.5 s
+ #    2 GMRES  10 iterations       2.0 s
+CHECK[   2] gmres_iter =   10
+CHECK[   2] norm_sol2  = 6.58309882E+02
+ #    2 external points             3.5 s
+CHECK[   2] norm_pout  = 8.95100064E-02
+CHECK[   2] norm_HRTF  = 3.37444029E+00
+       2   24000.000     10       11.5   2/2
+ end of block    2 at t =     13.7 s, thread  0, blocks running  0
+ frequency loop:   13.683213214389980       s
+
+ done         : 2 frequencies in 13.7 s
+ iterations   : 7 to 10 (iter_max 150)
+ not converged: none
+ results      : result_RAY.txt

@@ -1,0 +1,26 @@
+! Regression test DIFF: sphere of 17 cm, 4010 triangles (sphere_test.geo), 2 kHz (BF and HF levels) and 24 kHz (HF only)
+2
+! Sampling rate fe (Hz)
+48000.0
+! Frequency line: the list of frequencies (Hz)
+2000.0 24000.0
+! Mesh file
+sphere_test.msh
+! External points file (Pext)
+Pext_test.txt
+! Output result file stem
+result_DIFF
+! Source: monopole position x y z (m) (python/source_oreille.py sphere_test.msh)
+-0.00050 -0.08699 0.00000
+! Normalisation by the free-field pressure at the head centre: 1 yes, 0 no
+1
+! Verbose: 2 (CHECK lines compared by run_test.sh)
+2
+! Log file
+new_DIFF.log
+! Speed of sound c (m/s)
+340.0
+! Technical file (no key: default fast settings)
+parametres_MLFMM_test.txt
+! Skin impedance: Rmax_BF (0 Hz) Rmax_HF (24 kHz)
+0.99 0.9

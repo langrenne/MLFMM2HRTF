@@ -1,0 +1,3 @@
+# Technical file of the regression tests: NO key, so the default values of the
+# code = fast setting (CHI, adaptive octree, 3 bands 5 / 8 kHz).
+# To test the precise setting: reglage = precis

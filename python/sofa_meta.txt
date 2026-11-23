@@ -1,0 +1,10 @@
+# SOFA metadata, read by npz2sofa.py (a sofa_meta.txt in the run directory takes
+# precedence over this one). Fill it in once; the options --title, --author,
+# --org, --license, --comment, --db override it. Lines starting with # are ignored.
+
+title   = HRTF computed with MLFMM2HRTF
+author  = name@institution.org
+org     =
+license = CC BY 4.0
+db      =
+comment =

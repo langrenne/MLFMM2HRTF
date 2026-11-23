@@ -1,0 +1,16 @@
+# build
+*.o
+*.mod
+*.smod
+*.a
+main_HRTF_Ray
+main_HRTF_Diff
+gmon.out
+# regression tests: outputs (only ref_*.log are kept)
+test/new_*.log
+test/result_*.txt
+# Python
+__pycache__/
+# editors
+*~
+*.bak

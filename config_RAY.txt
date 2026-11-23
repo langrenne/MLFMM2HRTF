@@ -1,0 +1,26 @@
+! Number of frequencies NF (0 with a list of frequencies)
+512
+! Sampling rate fe (Hz)
+48000.0
+! Frequency line: one value (used only if NF = 1), or the list of frequencies (Hz)
+2000.0
+! Mesh file: gmsh 2.2 .msh (m) or .stl (path relative to the run directory, or absolute)
+subject.msh
+! External points file (Pext): N, then N lines x y z (m)
+pext_lebedev_2702.txt
+! Output result file stem (the solver writes <stem>.txt)
+subject_R
+! Source: number of the source triangle at the ear canal entrance (python/source_oreille.py)
+1
+! Normalisation by the free-field pressure at the head centre: 1 yes, 0 no
+1
+! Verbose: 0 silent, 1 normal, 2 detailed (regression tests)
+1
+! Log file
+subject_R.log
+! Speed of sound c (m/s), required
+340.0
+! Technical file (key = value), or - for the default fast settings
+-
+! Skin impedance (optional line; absent = rigid): Rmax_BF Rmax_HF (0 Hz, 24 kHz), or a file
+1.0 1.0
